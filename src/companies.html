@@ -1,0 +1,103 @@
+<style>
+.head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end}
+.head h1{font-size:clamp(46px,7vw,88px);font-weight:400;letter-spacing:-.03em}
+.head h1 em{color:var(--hazel)}
+.labels{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}
+.lbl{position:relative;padding:28px 28px 26px;border-radius:4px;overflow:hidden;min-height:250px;display:flex;flex-direction:column;justify-content:space-between}
+.lbl::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(115deg,transparent 0 12px,rgba(255,255,255,.10) 12px 14px)}
+.lbl.a{background:linear-gradient(140deg,var(--foil-2),var(--foil) 70%,#AE8944);color:#3F2E10}
+.lbl.b{background:var(--red);color:#FCEBD9}
+.lbl h2{font-size:clamp(40px,5.4vw,66px);font-weight:400;margin:6px 0 10px}
+.lbl p{font-size:15px;max-width:44ch;position:relative;z-index:1}
+.lbl .label{color:inherit;opacity:.75}
+.lbl .ref{color:inherit;opacity:.7}
+.lbl .stamp{position:absolute;right:22px;top:22px;width:84px;height:84px;border:1.5px solid currentColor;border-radius:50%;display:grid;place-items:center;text-align:center;font:600 10px/1.2 var(--mono);letter-spacing:.1em;opacity:.55;transform:rotate(12deg)}
+.vs{margin-top:64px}
+.row{display:grid;grid-template-columns:200px 1fr 1fr;gap:24px;padding:16px 0;border-top:1px solid var(--line);align-items:center}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row .k{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.row .v{font:400 19px/1.3 var(--serif)}
+.row .v small{display:block;font:13px/1.4 var(--sans);color:var(--ink-2);margin-top:3px}
+.meter{height:8px;background:var(--paper-2);border-radius:4px;margin-top:9px;overflow:hidden}
+.meter i{display:block;height:100%;width:0;border-radius:4px;transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+.colhead{display:grid;grid-template-columns:200px 1fr 1fr;gap:24px;padding-bottom:10px}
+.ai{margin-top:72px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.ai ul{list-style:none;margin-top:14px}
+.ai li{padding:11px 0;border-top:1px dashed var(--line);font-size:15px}
+.ai li b{font-family:var(--serif);font-weight:500;font-size:17px}
+.blank{padding:22px;border:1.5px dashed var(--ink-3);border-radius:3px;margin-top:14px}
+.why{margin-top:64px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start}
+.why .hand{font-size:30px;transform:rotate(-4deg);margin-top:4px}
+@media (max-width:800px){.head,.labels,.ai{grid-template-columns:1fr}.row,.colhead{grid-template-columns:1fr 1fr}.row .k{grid-column:1/-1}.colhead span:first-child{display:none}.why{grid-template-columns:1fr}}
+</style>
+<main>
+  <div class="head">
+    <h1>Company <em>profiles</em></h1>
+    <p class="muted">One family-owned global brand machine, one listed factory from Kostanay. Same industry, very different scale — that difference is exactly what makes the comparison useful. Numbers in brackets point to the <b>Sources</b> page.</p>
+  </div>
+
+  <div class="labels">
+    <div class="lbl a rv"><div class="stamp">COMPANY<br>A</div>
+      <div><span class="label">International comparator · Italy / Luxembourg</span><h2>Ferrero</h2></div>
+      <p>Family-owned group behind Nutella, Kinder and Ferrero Rocher. Ferrero International S.A. is registered under Luxembourg law and is not publicly traded.<span class="ref">[5], [13]</span> Margins come from strong premium brands.</p>
+    </div>
+    <div class="lbl b rv"><div class="stamp">COMPANY<br>B</div>
+      <div><span class="label">Kazakhstan focal company · Kostanay</span><h2>Bayan Sulu</h2></div>
+      <p>The largest confectionery maker in Kazakhstan, founded in 1974.<span class="ref">[2]</span> A joint-stock company listed on KASE as BSUL.<span class="ref">[26]</span> Mass-market sweets: high volume, low price, 300+ products.</p>
+    </div>
+  </div>
+
+  <div class="vs">
+    <div class="colhead label"><span></span><span>Ferrero</span><span>Bayan Sulu</span></div>
+    <div class="row rv"><span class="k">Reach</span>
+      <div class="v">170+ countries<small>products sold; operates in 50+</small><div class="meter"><i data-w="100" style="background:var(--foil)"></i></div><span class="ref">[3]</span></div>
+      <div class="v">14 countries<small>about 40% of output is exported</small><div class="meter"><i data-w="8.2" style="background:var(--red)"></i></div><span class="ref">[2]</span></div></div>
+    <div class="row rv"><span class="k">Revenue</span>
+      <div class="v">€19.3 billion<small>FY to Aug 31, 2025, +4.6%</small><span class="ref">[3], [24]</span></div>
+      <div class="v">51.79 billion ₸<small>≈ $114 million in 2025, +9.53%</small><span class="ref">[4]</span></div></div>
+    <div class="row rv"><span class="k">People</span>
+      <div class="v">50,000+<small>employees worldwide</small><div class="meter"><i data-w="100" style="background:var(--foil)"></i></div><span class="ref">[3]</span></div>
+      <div class="v">1,500+<small>+260 jobs planned at the new factory</small><div class="meter"><i data-w="3" style="background:var(--red)"></i></div><span class="ref">[31], [32]</span></div></div>
+    <div class="row rv"><span class="k">Ownership</span>
+      <div class="v">Private, family-controlled<small>discloses AI matters at its own choice</small></div>
+      <div class="v">Public JSC on KASE<small>must disclose to investors</small></div></div>
+    <div class="row rv"><span class="k">Business model</span>
+      <div class="v">Premium brands<small>a few flagship brands carry global reach</small></div>
+      <div class="v">Volume &amp; scale<small>affordable products, $100M+ in equipment over 15 years</small><span class="ref">[23]</span></div></div>
+    <div class="row rv"><span class="k">Competitors</span>
+      <div class="v">Mondelēz, Nestlé, Mars, Lindt<span class="ref">[7]–[10]</span></div>
+      <div class="v">LOTTE Rakhat + imports<small>roughly half of the sweets sold in Kazakhstan are imported</small><span class="ref">[6], [23]</span></div></div>
+    <div class="row rv"><span class="k">Weak spot</span>
+      <div class="v">Complexity<small>170+ sets of rules, incl. the EU AI Act</small><span class="ref">[27]</span></div>
+      <div class="v">Imported inputs<small>the 2022 sugar shortage; cocoa paid in foreign currency</small><span class="ref">[25]</span></div></div>
+  </div>
+
+  <div class="ai">
+    <div class="rv">
+      <span class="label">Where Ferrero already uses AI</span>
+      <ul>
+        <li><b>Alloy.ai</b> — store-level demand forecasting in the U.S.<span class="ref">[11]</span></li>
+        <li><b>Sourcemap &amp; Starling</b> — tracing 90%+ of cocoa, palm oil and hazelnuts<span class="ref">[19], [28]</span></li>
+        <li><b>Satellite monitoring</b> — 100% of palm-oil farms checked for deforestation<span class="ref">[12]</span></li>
+        <li><b>BigQuery</b> — grouping app and web visitors for different ads<span class="ref">[20]</span></li>
+        <li><b>Nutella Unica</b> — an algorithm designed 7 million unique jar labels<span class="ref">[21], [29]</span></li>
+      </ul>
+    </div>
+    <div class="rv">
+      <span class="label">Where Bayan Sulu stands</span>
+      <div class="blank">
+        <p style="font:400 22px/1.3 var(--serif)">No public proof of AI, big-data tools or a customer-tracking system yet.</p>
+        <p class="muted" style="margin-top:10px;font-size:15px">That is a gap — but also a clean start. There is no old system to replace, and the company already invests steadily in equipment and certificates (ISO 9001, ISO 22000, ISO 50001, Halal).<span class="ref">[2]</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="why rv">
+    <span class="hand">why this pair?</span>
+    <p>I grew up with Bayan Sulu sweets, and I wanted a Kazakh company with real public numbers — it is listed, so it has to publish them. Ferrero was the natural contrast: same products, but it already runs AI in its supply chain and marketing. Every recommendation on this site is for Bayan Sulu; Ferrero only supplies the evidence.</p>
+  </div>
+</main>
+<script>
+const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.meter i').forEach(i=>i.style.width=i.dataset.w+'%');io2.unobserve(e.target)}}),{threshold:.3});
+document.querySelectorAll('.row').forEach(r=>io2.observe(r));
+</script>

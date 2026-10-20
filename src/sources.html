@@ -1,0 +1,31 @@
+<style>
+.head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:40px}
+.head h1{font-size:clamp(46px,7vw,88px);font-weight:400;letter-spacing:-.03em}
+.head h1 em{color:var(--hazel)}
+.count{display:flex;gap:28px;margin-top:16px}
+.count b{font:400 44px/1 var(--serif);display:block}
+.grp{display:grid;grid-template-columns:180px 1fr;gap:28px;border-top:1.5px solid var(--ink);padding:20px 0 6px}
+.grp h3{font-size:24px}
+.grp ol{list-style:none}
+.grp li{display:grid;grid-template-columns:48px 1fr;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px;line-height:1.5;color:var(--ink-2)}
+.grp li span{font:500 12px var(--mono);color:var(--hazel);padding-top:2px}
+.grp li a{color:var(--ink);text-decoration-color:var(--foil);text-underline-offset:2px;word-break:break-all}
+@media (max-width:760px){.head,.grp{grid-template-columns:1fr;gap:10px}}
+</style>
+<main>
+  <div class="head">
+    <h1>Evidence <em>folder</em></h1>
+    <div><p class="muted">Every source behind the numbers on this site, in IEEE format, grouped by the week I first added it. The folder grows each week and is never restarted.</p>
+    <div class="count"><div><b id="cN">0</b><span class="label">sources</span></div><div><b id="cG">0</b><span class="label">checkpoints</span></div></div></div>
+  </div>
+  <div id="list"></div>
+</main>
+<script>
+(function(){
+  const S=window.SOURCES;let n=0;const box=document.getElementById('list');
+  S.forEach(g=>{const d=document.createElement('section');d.className='grp rv';
+    d.innerHTML='<div><span class="label">Added in</span><h3>'+g[0]+'</h3></div><ol>'+g[1].map(s=>'<li><span>['+(++n)+']</span><div>'+s.replace(/https?:\/\/[^\s<]+/g,u=>{let t='';if(/[.,]$/.test(u)){t=u.slice(-1);u=u.slice(0,-1)}return '<a href="'+u+'" target="_blank" rel="noopener">'+u+'</a>'+t})+'</div></li>').join('')+'</ol>';box.appendChild(d)});
+  const run=(el,to)=>{let i=0;const t=setInterval(()=>{el.textContent=++i;if(i>=to)clearInterval(t)},28)};
+  run(document.getElementById('cN'),n);run(document.getElementById('cG'),S.length);
+})();
+</script>

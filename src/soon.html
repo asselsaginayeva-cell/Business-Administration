@@ -1,0 +1,20 @@
+<style>
+.box{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;min-height:440px}
+.box h1{font-size:clamp(42px,6vw,76px);font-weight:400;letter-spacing:-.03em}
+.box h1 em{color:var(--hazel)}
+.gift{position:relative;aspect-ratio:1.5/1;border-radius:6px;background:var(--cocoa);box-shadow:0 26px 40px -22px rgba(36,21,13,.6);overflow:hidden}
+.gift::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 14px,rgba(255,255,255,.04) 14px 16px)}
+.gift .rib{position:absolute;background:var(--red)}
+.gift .h{left:0;right:0;top:44%;height:12%}.gift .v{top:0;bottom:0;left:40%;width:9%}
+.gift .tag{position:absolute;right:9%;bottom:12%;background:var(--card);padding:12px 16px;transform:rotate(-6deg);border-radius:3px;box-shadow:0 6px 12px rgba(0,0,0,.25);transition:transform .4s}
+.gift:hover .tag{transform:rotate(2deg) translateY(-6px)}
+.list{margin-top:22px;list-style:none}
+.list li{padding:10px 0;border-top:1px dashed var(--line);font-size:15px;display:flex;gap:14px}
+.list li span{font:500 12px var(--mono);color:var(--hazel);min-width:42px;padding-top:2px}
+@media (max-width:760px){.box{grid-template-columns:1fr;gap:28px}}
+</style>
+<main><div class="box">
+  <div class="rv"><div class="label">{{KICKER}}</div><h1>{{TITLE}}</h1><p class="muted" style="margin-top:16px">{{TEXT}}</p>
+  <ul class="list">{{ITEMS}}</ul></div>
+  <div class="gift rv" aria-hidden="true"><i class="rib h"></i><i class="rib v"></i><div class="tag"><span class="label">Do not open until</span><div class="hand" style="color:var(--ink);font-size:30px">{{TAG}}</div></div></div>
+</div></main>

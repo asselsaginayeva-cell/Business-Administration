@@ -1,0 +1,82 @@
+<style>
+.head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end}
+.head h1{font-size:clamp(46px,7vw,88px);font-weight:400;letter-spacing:-.03em}
+.head h1 em{color:var(--hazel)}
+.periods{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:48px}
+.period>.label{display:flex;justify-content:space-between;border-bottom:1.5px solid var(--ink);padding-bottom:8px;margin-bottom:16px}
+.as{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.as .code{font:400 40px/1 var(--serif);color:var(--cocoa)}
+.as.off .code{color:var(--ink-3);opacity:.6}
+.as h3{font-size:22px}
+.as p{font-size:14.5px;color:var(--ink-2);margin:6px 0 12px}
+.status{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.status.ok{color:#4E6B3A}.status.wip{color:var(--hazel)}.status.later{color:var(--ink-3)}
+.a1{margin-top:76px;background:var(--card);border:1.5px solid var(--ink);border-radius:3px;padding:34px;position:relative;box-shadow:6px 6px 0 var(--paper-2)}
+.a1 .tape{top:-12px;right:60px}
+.a1 h2{margin:8px 0 12px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 8px}
+.filters button{font:600 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:8px 11px;border:1.5px solid var(--ink);background:transparent;border-radius:2px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.vt{width:100%;border-collapse:collapse;margin-top:8px}
+.vt th{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:10px 12px 10px 0;border-bottom:1.5px solid var(--ink)}
+.vt td{padding:14px 12px 14px 0;border-bottom:1px solid var(--line);vertical-align:top;font-size:14.5px}
+.vt td:first-child{font:500 17px/1.25 var(--serif);width:24%}
+.vt tr{transition:opacity .3s}
+.vt tr.dim{opacity:.18}
+.recs{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:30px;align-items:start}
+.recs ol{padding-left:20px;font-size:14.5px;color:var(--ink-2)}
+.recs li{margin-bottom:8px}
+@media (max-width:820px){.head,.periods,.recs{grid-template-columns:1fr}.a1{padding:22px 18px}.vt td:nth-child(2),.vt th:nth-child(2){display:none}}
+</style>
+<main>
+  <div class="head">
+    <h1>Atte<em>station</em></h1>
+    <p class="muted">Four bigger pieces, each built from two or three weekly records. Each one argues a position, not just describes — and each one later grows into a part of the Capstone.</p>
+  </div>
+
+  <div class="periods">
+    <div class="period rv">
+      <div class="label"><span>1st attestation</span><span>30%</span></div>
+      <div class="as"><span class="code">A1</span><div><span class="status ok">● Submitted · Week 3</span><h3>Business Report</h3><p>Comparative analysis of Ferrero and Bayan Sulu: context, stakeholders, business model, transfer judgment, recommendations for Kazakhstan. 1,212 words.</p><div style="display:flex;gap:10px;flex-wrap:wrap" data-links="A1_REPORT:Report|A1_APPENDIX:Appendix"></div></div></div>
+      <div class="as"><span class="code">A2</span><div><span class="status ok">● Submitted · Week 5</span><h3>Video Essay</h3><p>The human–AI operating model for Bayan Sulu's cocoa ordering: what stays human, what is AI-assisted, and what happens when it fails. 4 minutes.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="/video/">▶ Watch the video</a></div></div></div>
+    </div>
+    <div class="period rv">
+      <div class="label"><span>2nd attestation</span><span>30%</span></div>
+      <div class="as"><span class="code">A3</span><div><span class="status ok">● Submitted · Week 7</span><h3>Photo Essay</h3><p>How customer, AI and data systems are reshaping Ferrero and Bayan Sulu. My claim: AI can help Bayan Sulu reach Gulf families faster, but only if a named person checks every AI suggestion and customer data is used with consent.</p><div style="display:flex;gap:10px;flex-wrap:wrap" data-links="A3_ESSAY:Photo Essay|A3_EVA:Evidence artifacts|A3_EVF:Evidence folder|A3_AIDECL:AI Use Declaration"></div></div></div></div>
+      <div class="as off"><span class="code">A4</span><div><span class="status later">○ Week 9</span><h3>Argumentative Essay</h3><p>A position on finance, capability and workforce — and the strongest case against it.</p></div></div>
+    </div>
+  </div>
+
+  <section class="a1 rv"><span class="tape"></span>
+    <span class="label">Inside A1 · comparison and transfer judgment</span>
+    <h2>Six ideas from Ferrero, <em>sorted</em></h2>
+    <p class="muted">For each AI practice I gave Bayan Sulu one of five verdicts. Click a verdict to filter.</p>
+    <div class="filters" id="f"></div>
+    <table class="vt"><thead><tr><th>AI idea</th><th>What Ferrero does</th><th>Verdict</th><th>Why, for Bayan Sulu</th></tr></thead><tbody id="tb"></tbody></table>
+    <div class="recs">
+      <div><span class="label">My bottom line</span><p style="font:400 21px/1.35 var(--serif);margin-top:10px">Adopt the ready-made tool first — AI sorting on the line. The biggest chance is piloting demand forecasting, because a volume business loses most when it over-produces.</p></div>
+      <div><span class="label">Recommendations in the report</span><ol style="margin-top:10px">
+        <li>Pilot AI demand forecasting in Kazakhstan stores first.</li>
+        <li>Adapt a supply-risk tracker for sugar and cocoa (remember 2022).</li>
+        <li>Draft a short AI-ethics policy: no AI decision without human review.</li>
+        <li>Adopt AI-assisted sorting; success = falling waste rate in year one.</li>
+        <li>Test audience segmentation on the website only.</li></ol></div>
+    </div>
+  </section>
+</main>
+<script>
+(function(){
+  const L=window.LINKS||{};
+  document.querySelectorAll('[data-links]').forEach(el=>{el.innerHTML=el.dataset.links.split('|').map(p=>{const[k,t]=p.split(':');return L[k]?'<a class="btn" target="_blank" rel="noopener" href="'+L[k]+'">↗ '+t+'</a>':'<span class="btn ghost">'+t+' · link soon</span>'}).join('')});
+  const R=[["Predict what stores need","Tracks real store sales data in the U.S. to avoid stock-outs and overstock","pilot","Kazakh stores are a small, safe place to test before 14 export countries."],
+  ["Trace ingredients back to the farm","Traces 90%+ of its cocoa, palm oil and hazelnuts","adapt","The real risk is smaller — imported sugar and cocoa. A simple tracker aimed at the 2022 sugar problem fits better."],
+  ["Watch farms by satellite","Monitors 100% of palm-oil farms for illegal tree-cutting","delay","Bayan Sulu buys little palm oil and mostly sells to markets that don't require this yet."],
+  ["Study customers, show different ads","Groups app and website visitors and targets each group","pilot","Far fewer visitors than Ferrero. Test on one channel before building a big system."],
+  ["AI-designed unique labels","7 million unique Nutella jars — they sold out","adapt","One product, one season fits the budget better than a national campaign."],
+  ["AI cameras to sort ingredients","Common in the industry at Ferrero's size","adopt","Off-the-shelf, fits how Bayan Sulu already invests in equipment, cuts waste right away."]];
+  const tb=document.getElementById('tb'),f=document.getElementById('f');
+  tb.innerHTML=R.map(r=>'<tr data-v="'+r[2]+'"><td>'+r[0]+'</td><td>'+r[1]+'</td><td><span class="chip v-'+r[2]+'">'+r[2]+'</span></td><td>'+r[3]+'</td></tr>').join('');
+  ['all','adopt','adapt','pilot','delay','reject'].forEach(v=>{const b=document.createElement('button');b.textContent=v;b.setAttribute('aria-pressed',v==='all');
+    b.onclick=()=>{f.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));tb.querySelectorAll('tr').forEach(tr=>tr.classList.toggle('dim',v!=='all'&&tr.dataset.v!==v))};f.appendChild(b)});
+})();
+</script>

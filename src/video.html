@@ -1,0 +1,52 @@
+<style>
+.head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end}
+.head h1{font-size:clamp(46px,7vw,88px);font-weight:400;letter-spacing:-.03em}
+.head h1 em{color:var(--hazel)}
+.screen{margin-top:40px;background:var(--cocoa-lo);padding:14px;border-radius:6px;box-shadow:0 26px 44px -26px rgba(36,21,13,.6)}
+.screen video{display:block;width:100%;height:auto;aspect-ratio:1040/480;background:#000;border-radius:2px}
+.meta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#C9B39C;padding:12px 4px 2px}
+.meta .label{color:#C9B39C}
+.notes{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;margin-top:48px;align-items:start}
+.pos{font:400 clamp(22px,2.4vw,27px)/1.3 var(--serif);border-left:3px solid var(--red);padding-left:20px;margin-top:10px}
+.parts{list-style:none;margin-top:10px}
+.parts li{display:flex;gap:14px;padding:10px 0;border-top:1px dashed var(--line);font-size:15px}
+.parts li span{font:500 12px var(--mono);color:var(--hazel);min-width:44px;padding-top:2px}
+.next{margin-top:64px;display:flex;gap:22px;align-items:center;padding:22px 24px;border:1.5px dashed var(--ink-3);border-radius:3px}
+.next .hand{font-size:30px;white-space:nowrap;transform:rotate(-3deg)}
+@media (max-width:820px){.head,.notes{grid-template-columns:1fr;gap:20px}.next{flex-direction:column;align-items:flex-start}}
+</style>
+<main>
+  <div class="head">
+    <h1>Video <em>presentation</em></h1>
+    <p class="muted">Assignment 2, my video essay: the human–AI operating model for Bayan Sulu. The allocation matrix from Week 4 and the cocoa process map from Week 5 are on screen.</p>
+  </div>
+
+  <div class="screen rv">
+    <video controls preload="metadata" playsinline poster="/media/a2-poster.jpg">
+      <source src="/media/Saginayeva_AIB2602_A2_video_essay.mp4" type="video/mp4">
+      Your browser can't play this video. <a href="/media/Saginayeva_AIB2602_A2_video_essay.mp4">Open the file</a>.
+    </video>
+    <div class="meta"><span class="label">A2 · Video essay · 4 min</span><span class="label">Ferrero → Bayan Sulu</span></div>
+  </div>
+
+  <div class="notes">
+    <div class="rv">
+      <span class="label">My position</span>
+      <p class="pos">AI should draft the weekly cocoa order, but a named supply manager approves every order, and people keep every decision about food safety and hiring.</p>
+    </div>
+    <div class="rv">
+      <span class="label">What the video covers</span>
+      <ul class="parts">
+        <li><span>01</span>Why cocoa: imported, paid in foreign currency, weeks to arrive</li>
+        <li><span>02</span>The allocation matrix: Human only, Human + AI, AI with review, Automated</li>
+        <li><span>03</span>What to take from Ferrero, and what to reject</li>
+        <li><span>04</span>First step: an eight-week test on cocoa powder</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="next rv">
+    <span class="hand">next, week 10 →</span>
+    <p class="muted">The Capstone video (10–15 minutes, for Bayan Sulu's board) will build on this essay and appear on this page.</p>
+  </div>
+</main>
