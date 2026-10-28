@@ -58,5 +58,14 @@ window.SOURCES=[
  ]],
  ["Week 7",[
   'Baker McKenzie, “Kazakhstan: New Amendments to Personal Data Legislation,” Jul. 21, 2026. [Online]. Available: https://www.bakermckenzie.com/en/insight/publications/2026/07/kazakhstan-new-amendments-to-personal-data-legislation'
+ ]],
+ ["Week 8",[
+  'L. J. Gitman et al., <i>Introduction to Business</i>, 2nd ed. Houston, TX, USA: OpenStax, 2026, chs. 14, 16. [Online]. Available: https://openstax.org/details/books/introduction-business-2e',
+  'StockAnalysis.com, “JSC Bayan Sulu (KASE: BSUL) – Balance sheet.” [Online]. Available: https://stockanalysis.com/quote/kase/BSUL/financials/balance-sheet/. [Accessed: Oct. 28, 2026].',
+  'StockAnalysis.com, “JSC Bayan Sulu (KASE: BSUL) – Cash flow statement.” [Online]. Available: https://stockanalysis.com/quote/kase/BSUL/financials/cash-flow-statement/. [Accessed: Oct. 28, 2026].',
+  'Ferrero Italia, “Le società del Gruppo Ferrero in Italia approvano i bilanci civilistici al 31 agosto 2025,” press release, Dec. 23, 2025. [Online]. Available: https://www.ferrero.com/it/it/news-media/comunicati-stampa/le-societa-del-gruppo-ferrero-in-italia-approvano-i-bilanci-civilistici (in Italian).'
+ ]],
+ ["Week 9",[
+  'L. J. Gitman et al., <i>Introduction to Business</i>, 2nd ed. Houston, TX, USA: OpenStax, 2026, chs. 8, 17. [Online]. Available: https://openstax.org/details/books/introduction-business-2e'
  ]]
 ];
